@@ -6,7 +6,7 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-import io.reactivex.rxjava3.core.Observable;
+import retrofit2.Call;
 
 public class CollectionClient {
 
@@ -17,7 +17,7 @@ public class CollectionClient {
         this.collectionService = collectionService;
     }
 
-    public Observable<List<Collection>> getCollections(){
+    public Call<List<Collection>> getCollections(){
         return collectionService.getCollections();
     }
 }

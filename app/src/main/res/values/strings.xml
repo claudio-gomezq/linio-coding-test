@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Linio Coding Test</string>
+    <string name="product_image">product_image</string>
+    <string name="title_page_favorites">Favoritos</string>
 </resources>
