@@ -8,9 +8,9 @@
         android:id="@+id/toolbar_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/TextStyle"
         android:textAlignment="center"
         android:text="@string/title_page_favorites"
-        android:textColor="@color/black" />
+        android:textColor="@color/black"
+        style="@style/TextStyle" />
 
 </androidx.appcompat.widget.Toolbar>

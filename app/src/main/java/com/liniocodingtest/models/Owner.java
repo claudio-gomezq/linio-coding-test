@@ -2,26 +2,26 @@ package com.liniocodingtest.models;
 
 import com.google.gson.annotations.SerializedName;
 
-public class Owner{
+public class Owner {
 
-	@SerializedName("name")
-	private String name;
+    @SerializedName("name")
+    private String name;
 
-	@SerializedName("email")
-	private String email;
+    @SerializedName("email")
+    private String email;
 
-	@SerializedName("linioId")
-	private String linioId;
+    @SerializedName("linioId")
+    private String linioId;
 
-	public String getName(){
-		return name;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public String getEmail(){
-		return email;
-	}
+    public String getEmail() {
+        return email;
+    }
 
-	public String getLinioId(){
-		return linioId;
-	}
+    public String getLinioId() {
+        return linioId;
+    }
 }

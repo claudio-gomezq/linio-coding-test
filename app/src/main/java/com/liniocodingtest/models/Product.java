@@ -1,83 +1,94 @@
 package com.liniocodingtest.models;
 
 import com.google.gson.annotations.SerializedName;
+import java.util.List;
 
 public class Product {
 
-	@SerializedName("image")
-	private String image;
+    @SerializedName("image")
+    private String image;
 
-	@SerializedName("freeShipping")
-	private boolean freeShipping;
+    @SerializedName("freeShipping")
+    private boolean freeShipping;
 
-	@SerializedName("imported")
-	private boolean imported;
+    @SerializedName("imported")
+    private boolean imported;
 
-	@SerializedName("name")
-	private String name;
+    @SerializedName("name")
+    private String name;
 
-	@SerializedName("active")
-	private boolean active;
+    @SerializedName("active")
+    private boolean active;
 
-	@SerializedName("wishListPrice")
-	private int wishListPrice;
+    @SerializedName("wishListPrice")
+    private int wishListPrice;
 
-	@SerializedName("conditionType")
-	private String conditionType;
+    @SerializedName("conditionType")
+    private String conditionType;
 
-	@SerializedName("id")
-	private int id;
+    @SerializedName("id")
+    private int id;
 
-	@SerializedName("linioPlusLevel")
-	private int linioPlusLevel;
+    @SerializedName("linioPlusLevel")
+    private int linioPlusLevel;
 
-	@SerializedName("slug")
-	private String slug;
+    @SerializedName("slug")
+    private String slug;
 
-	@SerializedName("url")
-	private String url;
+    @SerializedName("url")
+    private String url;
 
-	public String getImage(){
-		return image;
-	}
+    private List<BadgeEnum> badgeList;
 
-	public boolean isFreeShipping(){
-		return freeShipping;
-	}
+    public String getImage() {
+        return image;
+    }
 
-	public boolean isImported(){
-		return imported;
-	}
+    public boolean isFreeShipping() {
+        return freeShipping;
+    }
 
-	public String getName(){
-		return name;
-	}
+    public boolean isImported() {
+        return imported;
+    }
 
-	public boolean isActive(){
-		return active;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public int getWishListPrice(){
-		return wishListPrice;
-	}
+    public boolean isActive() {
+        return active;
+    }
 
-	public String getConditionType(){
-		return conditionType;
-	}
+    public int getWishListPrice() {
+        return wishListPrice;
+    }
 
-	public int getId(){
-		return id;
-	}
+    public String getConditionType() {
+        return conditionType;
+    }
 
-	public int getLinioPlusLevel(){
-		return linioPlusLevel;
-	}
+    public int getId() {
+        return id;
+    }
 
-	public String getSlug(){
-		return slug;
-	}
+    public int getLinioPlusLevel() {
+        return linioPlusLevel;
+    }
 
-	public String getUrl(){
-		return url;
-	}
+    public String getSlug() {
+        return slug;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public List<BadgeEnum> getBadgeList() {
+        return badgeList;
+    }
+
+    public void setBadgeList(List<BadgeEnum> badgeList) {
+        this.badgeList = badgeList;
+    }
 }

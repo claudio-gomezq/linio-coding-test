@@ -2,6 +2,8 @@ package com.liniocodingtest.network;
 
 import android.content.Context;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
@@ -22,7 +24,8 @@ public class MockClientInterceptor implements Interceptor {
     }
 
     @Override
-    public Response intercept(Chain chain) throws IOException {
+    @NotNull
+    public Response intercept(Chain chain) {
 
         HttpUrl url = chain.request().url();
 

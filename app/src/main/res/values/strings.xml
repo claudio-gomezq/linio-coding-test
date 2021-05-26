@@ -2,4 +2,6 @@
     <string name="app_name">Linio Coding Test</string>
     <string name="product_image">product_image</string>
     <string name="title_page_favorites">Favoritos</string>
+    <string name="descriptor_favorite_icon">favorite_icon</string>
+    <string name="all_my_favorites">Todos mis favoritos (%1$s)</string>
 </resources>

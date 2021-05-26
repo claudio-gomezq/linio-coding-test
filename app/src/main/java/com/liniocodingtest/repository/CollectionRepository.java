@@ -16,13 +16,11 @@ import retrofit2.Response;
 
 public class CollectionRepository {
     private final MutableLiveData<List<Collection>> collectionListLiveData;
-    private final MutableLiveData<List<Product>> productListLiveData;
     private final CollectionClient collectionClient;
 
     public CollectionRepository(CollectionClient collectionClient) {
         this.collectionClient = collectionClient;
         this.collectionListLiveData = new MutableLiveData<>();
-        this.productListLiveData = new MutableLiveData<>();
     }
 
     public void getCollectionList() {
@@ -31,15 +29,6 @@ public class CollectionRepository {
             .enqueue(new Callback<List<Collection>>() {
                 @Override
                 public void onResponse(Call<List<Collection>> call, Response<List<Collection>> response) {
-
-                    if(response.body() != null){
-                        ArrayList<Product> productsList = new ArrayList<>();
-                        for(Collection collection : response.body()){
-                            productsList.addAll(collection.getProducts());
-                        }
-                        productListLiveData.postValue(productsList);
-                    }
-
                     collectionListLiveData.postValue(response.body());
                 }
 
@@ -53,9 +42,5 @@ public class CollectionRepository {
 
     public LiveData<List<Collection>> getCollectionListLiveData(){
         return this.collectionListLiveData;
-    }
-
-    public LiveData<List<Product>> getProductListLiveData(){
-        return this.productListLiveData;
     }
 }
