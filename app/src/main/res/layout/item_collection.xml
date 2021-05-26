@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="8dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_collection"
+        android:layout_width="174dp"
+        android:layout_height="120dp"
+        android:elevation="0dp"
+        app:cardBackgroundColor="@color/background_color"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="0dp"
+        >
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:padding="10dp">
+
+           <ImageView
+               android:id="@+id/first_image"
+               android:layout_alignParentTop="true"
+               android:layout_alignParentStart="true"
+               android:layout_width="100dp"
+               android:layout_height="100dp"
+               android:contentDescription="@string/collection_image"
+               tools:src="@mipmap/ic_launcher"
+               />
+
+           <ImageView
+               android:id="@+id/second_image"
+               android:layout_toEndOf="@id/first_image"
+               android:layout_width="46dp"
+               android:layout_height="46dp"
+               android:layout_marginStart="8dp"
+               android:contentDescription="@string/collection_image"
+               tools:src="@mipmap/ic_launcher"/>
+
+           <ImageView
+               android:id="@+id/third_image"
+               android:layout_toEndOf="@id/first_image"
+               android:layout_below="@id/second_image"
+               android:layout_width="46dp"
+               android:layout_height="46dp"
+               android:layout_marginTop="8dp"
+               android:layout_marginStart="8dp"
+               android:contentDescription="@string/collection_image"
+               tools:src="@mipmap/ic_launcher"/>
+
+       </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/text_collection_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/card_collection"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="8dp"
+        style="@style/TextStyle3"
+        tools:text="Collection name"/>
+
+    <TextView
+        android:id="@+id/text_total_collection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_collection_name"
+        android:layout_marginStart="8dp"
+        style="@style/TextStyle4"
+        tools:text="1"/>
+
+</RelativeLayout>

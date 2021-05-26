@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".ui.views.FavoriteFragment">
+
+    <TextView
+        android:id="@+id/text_total"
+        style="@style/TextStyle2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        tools:text="Todos mis favoritos (16)" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_favorite"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="9dp"
+        android:clipToPadding="false"
+        android:nestedScrollingEnabled="false"
+        android:layout_below="@+id/text_total"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="2"
+        tools:listitem="@layout/item_favorite" />
+
+</RelativeLayout>

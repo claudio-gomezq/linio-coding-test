@@ -4,10 +4,8 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
 import com.liniocodingtest.models.Collection;
-import com.liniocodingtest.models.Product;
 import com.liniocodingtest.network.CollectionClient;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -24,6 +22,10 @@ public class CollectionRepository {
     }
 
     public void getCollectionList() {
+        if (this.collectionListLiveData.getValue() != null) {
+            return;
+        }
+
         this.collectionClient
             .getCollections()
             .enqueue(new Callback<List<Collection>>() {

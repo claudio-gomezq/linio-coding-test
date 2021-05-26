@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LinioCodingTest">
-        <activity android:name=".views.MainActivity">
+        <activity android:name=".ui.views.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

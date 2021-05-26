@@ -1,4 +1,4 @@
-package com.liniocodingtest.viewmodels;
+package com.liniocodingtest.ui.viewmodels;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.Transformations;

@@ -23,4 +23,20 @@
         <item name="android:windowContentOverlay">@null</item>
         <item name="android:elevation">0dp</item>
     </style>
+
+    <style name="TextStyle3">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:lineSpacingExtra">5sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="TextStyle4">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:lineSpacingExtra">5sp</item>
+        <item name="android:textColor">@color/pinkish_grey</item>
+    </style>
 </resources>

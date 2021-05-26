@@ -1,4 +1,4 @@
-package com.liniocodingtest.adapters;
+package com.liniocodingtest.ui.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -52,6 +52,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
 
         Glide.with(context)
                 .load(item.getImage())
+                .placeholder(R.mipmap.ic_launcher)
                 .into(holder.imageView);
 
         List<BadgeEnum> badgeIconList = item.getBadgeList();

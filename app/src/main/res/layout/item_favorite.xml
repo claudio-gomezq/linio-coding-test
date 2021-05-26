@@ -1,23 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginStart="9dp"
     android:layout_marginBottom="8dp">
 
-    <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    <androidx.cardview.widget.CardView
         android:id="@+id/card_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        card_view:cardCornerRadius="6dp">
+        android:foreground="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="0dp">
 
         <LinearLayout
             android:id="@+id/image_list"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:elevation="1dp"
-            android:orientation="vertical">
-        </LinearLayout>
+            android:orientation="vertical" />
 
         <ImageButton
             android:layout_width="wrap_content"
@@ -25,17 +30,17 @@
             android:layout_gravity="end"
             android:layout_marginTop="4dp"
             android:layout_marginEnd="4dp"
+            android:contentDescription="@string/descriptor_favorite_icon"
             android:elevation="1dp"
             android:padding="0dp"
-            android:src="@drawable/nd_ic_24_fav_on_pink_white_circle"
-            android:contentDescription="@string/descriptor_favorite_icon" />
+            android:src="@drawable/nd_ic_24_fav_on_pink_white_circle" />
 
         <ImageView
             android:id="@+id/image_view"
             android:layout_width="match_parent"
             android:layout_height="174dp"
-            android:background="?selectableItemBackground"
             android:contentDescription="@string/product_image"
-            android:scaleType="center" />
+            android:scaleType="center"
+            tools:src="@mipmap/ic_launcher" />
     </androidx.cardview.widget.CardView>
 </LinearLayout>
